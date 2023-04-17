@@ -11,6 +11,7 @@
 
 .App {
   height: 100%;
+  display: flex;
 }
 
 .movie {
@@ -26,6 +27,7 @@
   border-radius: 0.6em;
   box-shadow: 1.2em 2em 3em;
   display: flex;
+  flex-direction: column;
 }
 
 .search {
@@ -33,5 +35,4 @@
   width: 100%;
   grid-template-columns: 9fr 3fr;
   gap: 1.2em; 
-  
 }

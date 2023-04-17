@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MyButton from './UI/button/MyButton';
 import MyInput from './UI/input/MyInput';
+import Loader from './UI/Loader/Loader'
 import { useFetching } from '../hooks/useFetching';
 import MovieService from '../API/MovieService';
 import MovieInfo from './MovieInfo';
@@ -16,6 +17,8 @@ const Movie = () => {
       }
       const response = await MovieService.getMovieByTitle(title);
       setMovie(response.data);
+      console.log(response);
+      setTitle('');
   })
 
   return (
@@ -31,7 +34,13 @@ const Movie = () => {
               Search
             </MyButton>
           </div>
-        <MovieInfo/>
+          {movieError && 
+          <h1>Error: ${movieError}</h1>
+          }
+          {isMovieLoading 
+            ? <Loader/> 
+            : <MovieInfo movie={movie}/>
+          }
     </div>  
   )
 }

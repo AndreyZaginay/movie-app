@@ -9,6 +9,10 @@
   background: linear-gradient(#1c1917 50%, #ffb92a 50%);
 }
 
+.margin-top-15px {
+  margin-top: 15px;
+}
+
 .App {
   height: 100%;
   display: flex;
@@ -27,6 +31,8 @@
   border-radius: 0.6em;
   box-shadow: 1.2em 2em 3em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -35,4 +41,21 @@
   width: 100%;
   grid-template-columns: 9fr 3fr;
   gap: 1.2em; 
+}
+
+.movie-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.movie-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  color: #ffb92a;
+}
+
+img {
+  width: 200px;
+  height: 300px;
 }

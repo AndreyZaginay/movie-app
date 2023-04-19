@@ -53,9 +53,22 @@
   display: grid;
   grid-template-columns: 4fr 6fr;
   color: #ffb92a;
+  scale: 0;
+  opacity: 0;
 }
 
 img {
   width: 200px;
   height: 300px;
+}
+
+.animation-test {
+  animation: 0.5s test forwards;
+}
+
+@keyframes test {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
 }

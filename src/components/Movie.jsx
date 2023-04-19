@@ -39,7 +39,7 @@ const Movie = () => {
           }
           {isMovieLoading 
             ? <Loader/> 
-            : <MovieInfo movie={movie}/>
+            : <MovieInfo animations={'animation-test'} movie={movie}/>
           }
     </div>  
   )

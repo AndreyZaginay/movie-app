@@ -1,15 +1,15 @@
 import React from 'react'
 
-const MovieInfo = ({ movie }) => {
+const MovieInfo = ({ movie, animations }) => {
 
   if (!movie) {
     return <h1 style={{color: '#ffb92a', textAlign: 'center'}}>Enter the movie name</h1>
   }
 
   return (
-        <div className='movie-container'>
+        <div className={`movie-container ${animations}`}>
           {movie.Response === 'True'
-          ? <div className='movie-info'>
+          ? <div className={`movie-info ${animations}`}>
               <img src={movie.Poster} alt="" />
               <div>  
                 <h1>{movie.Title}</h1>
